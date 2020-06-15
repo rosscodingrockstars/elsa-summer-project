@@ -1,0 +1,5 @@
+First, I have to make the play button work. When I click the play button, the actual game appears.
+Then, I need to make a random number generator (19-120)that declares the value of a treat. The value will change each round. 
+There also has to be another number generator that declares the goal you have to get.
+If I go over the goal, the game should end and a loss will be added to the chart of wins and losses.
+All of the numbers will be randomly generated again at the end of the game, reseting the goal and values of the treats.
