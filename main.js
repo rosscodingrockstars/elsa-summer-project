@@ -23,12 +23,23 @@ let treatThree = Math.floor(Math.random() * 12 + 1);
 let treatFour = Math.floor(Math.random() * 12 + 1);
 let treatFive = Math.floor(Math.random() * 12 + 1);
 let points = 0;
+$("#points").text(points);
+
 let wins = 0;
 let losses = 0;
 
 $("#cupcake").click(function() {
-  alert("Cupcake");
+console.log("cupcake", points += treatOne)
 });
-$("#cupcake").click(function() {
-  alert("Cupcake");
+$("#donut").click(function() {
+  console.log("donut", points += treatTwo)
+}); 
+$("#icecream").click(function() {
+  console.log("icecream", points += treatThree)
+}); 
+$("#cookie").click(function() {
+  console.log("cookie", points += treatFour)
+}); 
+$("#cake").click(function() {
+  console.log("cake", points += treatFive)
 }); 
