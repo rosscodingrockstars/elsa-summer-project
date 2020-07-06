@@ -7,39 +7,40 @@
 // $(".btn").click(function() {
 //   alert("playing");
 // });
-function getRandomInt(min, max) {
-  min = Math.ceil(min);
-  max = Math.floor(max);
-  let targetNumber = Math.floor(Math.random() * (max - min)) + min;
-  $("#target-number").text(targetNumber);
-
+let targetNumber = Math.floor(Math.random() * (120 - 19)) + 19;
+$("#target-number").text(targetNumber);
+let points = 0;
+$("#points").text(points);
+if(targetNumber < points) {
+  console.log("you lost")
+} else {
+  console.log("maybe you won")
 }
-
-getRandomInt(19, 120);
-
 let treatOne = Math.floor(Math.random() * 12 + 1);
 let treatTwo = Math.floor(Math.random() * 12 + 1);
 let treatThree = Math.floor(Math.random() * 12 + 1);
 let treatFour = Math.floor(Math.random() * 12 + 1);
 let treatFive = Math.floor(Math.random() * 12 + 1);
-let points = 0;
-$("#points").text(points);
-
 let wins = 0;
 let losses = 0;
 
 $("#cupcake").click(function() {
-console.log("cupcake", points += treatOne)
+  points += treatOne;
+  $("#points").text(points);
 });
 $("#donut").click(function() {
-  console.log("donut", points += treatTwo)
-}); 
+  points += treatTwo;
+  $("#points").text(points);
+});
 $("#icecream").click(function() {
-  console.log("icecream", points += treatThree)
-}); 
+  points += treatThree;
+  $("#points").text(points);
+});
 $("#cookie").click(function() {
-  console.log("cookie", points += treatFour)
-}); 
+  points += treatFour;
+  $("#points").text(points);
+});
 $("#cake").click(function() {
-  console.log("cake", points += treatFive)
-}); 
+  points += treatFive;
+  $("#points").text(points);
+});
