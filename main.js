@@ -1,33 +1,40 @@
-// $("#wins").text("1");
-
-// $("#icecream").click(function() {
-//   alert("Amount of coins collected");
-// });
-
-// $(".btn").click(function() {
-//   alert("playing");
-// });
 let targetNumber = Math.floor(Math.random() * (120 - 19)) + 19;
 $("#target-number").text(targetNumber);
 let points = 0;
 $("#points").text(points);
-function checkPoints() {
-  if (targetNumber < points) {
-    losses++;
-  } else if (points === targetNumber) {
-    wins++;
-  } else {
-    console.log("keep going");
-  }
-}
 let treatOne = Math.floor(Math.random() * 12 + 2);
 let treatTwo = Math.floor(Math.random() * 12 + 2);
 let treatThree = Math.floor(Math.random() * 12 + 2);
 let treatFour = Math.floor(Math.random() * 12 + 2);
 let treatFive = Math.floor(Math.random() * 12 + 2);
-let wins = 0;
-let losses = 0;
+$("#restart").click(function() {
 
+  $(".treats").show();
+  points = 0;
+  $("#points").text(points);
+  targetNumber = Math.floor(Math.random() * (120 - 19)) + 19;
+  $("#target-number").text(targetNumber);
+  treatOne = Math.floor(Math.random() * 12 + 2);
+  treatTwo = Math.floor(Math.random() * 12 + 2);
+  treatThree = Math.floor(Math.random() * 12 + 2);
+  treatFour = Math.floor(Math.random() * 12 + 2);
+  treatFive = Math.floor(Math.random() * 12 + 2);
+});
+function checkPoints() {
+  if (targetNumber < points) {
+    losses++;
+    $("#losses").text(losses);
+    $(".treats").hide();
+  } else if (points === targetNumber) {
+    wins++;
+    $("#wins").text(wins);
+    $(".treats").hide();
+  }
+}
+let wins = 0;
+$("#wins").text(wins);
+let losses = 0;
+$("#losses").text(losses);
 $("#cupcake").click(function() {
   points += treatOne;
   $("#points").text(points);
