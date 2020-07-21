@@ -1,3 +1,5 @@
+$("#restart").hide();
+
 let targetNumber = Math.floor(Math.random() * (120 - 19)) + 19;
 $("#target-number").text(targetNumber);
 let points = 0;
@@ -8,6 +10,7 @@ let treatThree = Math.floor(Math.random() * 12 + 2);
 let treatFour = Math.floor(Math.random() * 12 + 2);
 let treatFive = Math.floor(Math.random() * 12 + 2);
 $("#restart").click(function() {
+  $("#restart").hide();
 
   $(".treats").show();
   points = 0;
@@ -25,10 +28,12 @@ function checkPoints() {
     losses++;
     $("#losses").text(losses);
     $(".treats").hide();
+    $("#restart").show();
   } else if (points === targetNumber) {
     wins++;
     $("#wins").text(wins);
     $(".treats").hide();
+    $("#restart").show();
   }
 }
 let wins = 0;
