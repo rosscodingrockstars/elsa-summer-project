@@ -6,4 +6,9 @@
 }
 img {
    cursor: pointer;
+   padding: 20px;
+ }
+
+ .treats {
+  width: 135px;
  }
